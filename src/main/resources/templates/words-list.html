@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/create.css}">
+    <title>Words</title>
+</head>
+
+<body>
+
+<p th:text="${equals}"></p>
+<form action="#" th:action="@{/words}" th:object="${words}"   method="post">
+    <input readonly style="display: none" type="number" th:field="*{id}"  placeholder="ID">
+    <input readonly style="display: none" type="number" th:field="*{count}"  placeholder="Count">
+    <label for="words" class="word">Word</label>
+    <input readonly type="text" th:field="*{words}" id="words"  placeholder="Word">
+    <br/>
+    <label for="translate">Translate</label>
+    <input type="text" th:field="*{translate}" id="translate" placeholder="Translate">
+    <input type="submit" value="Create Word and Traslate">
+</form>
+</body>
+</html>

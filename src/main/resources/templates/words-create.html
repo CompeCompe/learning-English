@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Create newWords</title>
+</head>
+<body>
+<form action="#" th:action="@{/words-create}" th:object="${words}" method="post">
+    <label for="words">Word</label>
+    <input type="text" th:field="*{words}" id="words" placeholder="Word">
+    <label for="translate">Translate</label>
+    <input type="text" th:field="*{translate}" id="translate" placeholder="Translate">
+    <input type="submit" value="Create Word and Traslate">
+</form>
+</body>
+</html>
